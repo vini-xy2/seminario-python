@@ -28,7 +28,7 @@ def auto_configurar_ambiente():
             
         # 3. Instala os pacotes necessários sem usar cache (evita Erro 28: No space left)
         print("A instalar pacotes necessários. Isto pode demorar alguns minutos na primeira vez...")
-        pacotes = ["opencv-python", "numpy", "pandas", "tensorflow"]
+        pacotes = ["opencv-python", "numpy", "pandas", "tensorflow-cpu"]
         
         # A alteração foi feita aqui: adição do "--no-cache-dir"
         subprocess.run([python_venv, "-m", "pip", "install", "--quiet", "--no-cache-dir"] + pacotes, check=True)
